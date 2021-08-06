@@ -1,5 +1,5 @@
 {
-  "name": "drupal/prf_alert",
+  "name": "sffitzpatrick/prf_alert",
   "description": "Provides a configurable sitewide alert bar (block) for Drupal sites.",
   "type": "drupal-custom-module",
   "homepage": "https://github.com/sffitzpatrick/prf_alert",
