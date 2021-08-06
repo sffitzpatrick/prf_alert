@@ -1,0 +1,8 @@
+name: Sitewide Alert
+description: A configurable sitewide alert
+type: module
+core_version_requirement: ^8 || ^9
+package: Proof Studio
+dependencies:
+  - drupal:block
+configure: prfalert.configure

@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function prf_alert_theme() {
+    return [
+        'render_example_marquee' => [
+            'variables' => [
+                'content' => '',
+                'attributes' => array(),
+            ],
+        ],
+    ];
+}
