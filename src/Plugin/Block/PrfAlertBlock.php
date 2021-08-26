@@ -61,7 +61,11 @@ class PrfAlertBlock extends BlockBase {
     public function build() {
         $config = $this->getConfiguration();
         $alert_text = $config['prf_alert_block_text'];
-        return ['#markup' => '<span>' . $alert_text . '</span>'];
+        $build = array(
+          '#theme' =>  'prf_alert_block',
+          '#content' => $alert_text
+        );
+        return $build;
     }
 
 }

@@ -5,11 +5,12 @@
  */
 function prf_alert_theme() {
     return [
-        'render_example_marquee' => [
+        'prf_alert_block' => [
             'variables' => [
                 'content' => '',
                 'attributes' => array(),
             ],
+            'template' => 'prf-alert-block',
         ],
     ];
 }
