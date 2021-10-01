@@ -37,9 +37,9 @@ class PrfAlertBlock extends BlockBase {
         $config = $this->getConfiguration();
 
         $form['prf_alert_block_text'] = array(
-            '#type' => 'textfield',
+            '#type' => 'text_format',
             '#title' => $this->t('Alert text'),
-            '#default_value' => isset($config['prf_alert_block_text']) ? $config['prf_alert_block_text'] : '',
+            '#default_value' => isset($config['prf_alert_block_text']) ? $config['prf_alert_block_text']['value'] : '',
         );
 
         return $form;
@@ -50,7 +50,6 @@ class PrfAlertBlock extends BlockBase {
      */
     public function blockSubmit($form, FormStateInterface $form_state) {
         $this->configuration['prf_alert_block_text'] = $form_state->getValue('prf_alert_block_text');
-        $t = 1;
     }
 
     /**
@@ -63,8 +62,9 @@ class PrfAlertBlock extends BlockBase {
         $alert_text = $config['prf_alert_block_text'];
         $build = array(
           '#theme' =>  'prf_alert_block',
-          '#content' => $alert_text
+          '#content' => $alert_text['value']
         );
+        $t = 1;
         return $build;
     }
 

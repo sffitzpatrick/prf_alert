@@ -11,4 +11,8 @@
  * @ingroup render_example
  */
 #}
-<div class="prf-alert-text">{{ content }}</div>
+<div class="prf-alert-text">
+    <div class="">
+        {{ content | raw }}
+    </div>
+</div>
