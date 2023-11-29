@@ -64,7 +64,6 @@ class PrfAlertBlock extends BlockBase {
           '#theme' =>  'prf_alert_block',
           '#content' => $alert_text['value']
         );
-        $t = 1;
         return $build;
     }
 
